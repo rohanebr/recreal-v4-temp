@@ -1,0 +1,126 @@
+<!-- main-header -->
+<header class="main-header" ng-controller="HeaderController"> 
+  
+  <!-- main navbar -->
+  <nav class="navbar navbar-default main-navbar hidden-sm hidden-xs">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a ui-sref="home"><strong>Home</strong></a></li>
+          <li class=""><a ui-sref="blog"><strong>Blog</strong></a></li>
+          <li  class=""><a ui-sref="about"><strong>About</strong></a></li>
+          <li  class=""><a ui-sref="contact"><strong>Contact</strong></a></li>
+          <li  class=""><a ui-sref="employersinfo"><strong>Employers</strong></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="link-btn"><a href="login.html"><span ng-click="OpenSigninModal()" class="btn btn-theme btn-pill btn-xs btn-line">Login</span></a></li>
+          <li class="link-btn"><a href="register.html"><span class="btn btn-theme  btn-pill btn-xs btn-line">Submit Resume</span></a></li>
+          <li class="link-btn"><a href="register.html"><span class="btn btn-theme  btn-pill btn-xs btn-line">Register Company</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end main navbar --> 
+  
+  <!-- mobile navbar -->
+  <div class="container">
+    <nav class="mobile-nav hidden-md hidden-lg"> <a href="#" class="btn-nav-toogle first"> <span class="bars"></span> Menu </a>
+      <div class="mobile-nav-block">
+        <h4>Navigation</h4>
+        <a href="#" class="btn-nav-toogle"> <span class="barsclose"></span> Close </a>
+        <ul class="nav navbar-nav">
+          <li class=""><a href="job_list.html"><strong>Find a Job</strong></a></li>
+          <li class=""><a href="resume_list.html"><strong>Find Resumes</strong></a></li>
+          <li  class=""><a href="job_post_1.html"><strong>Post a Job</strong></a></li>
+          <li><a href="login.html"><strong>Login</strong></a></li>
+          <li><a href="register.html"><strong>Register</strong></a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Pages <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="blog.html">Articles &amp; Blog</a></li>
+              <li><a href="terms_privacy.html">Terms &amp; Privacy</a></li>
+              <li><a href="error_404.html">Error 404</a></li>
+              <li><a href="shortcode.html">Short Code</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Features <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="job_list.html">Find a Job</a></li>
+              <li><a href="job_details.html">Job Details</a></li>
+              <li><a href="resume_list.html">Find Resumes</a></li>
+              <li><a href="resume_details.html">Resume Details</a></li>
+              <li><a href="job_post_2.html">Post a Job</a></li>
+              <li><a href="company_page.html">Company Profile</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- mobile navbar -->
+  
+</header>
+<!-- end main-header --> 
+
+
+<!-- <div class="container" ng-controller="HeaderController">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" ng-click="toggleCollapsibleMenu()">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a ui-sref="home" class="navbar-brand">MEAN.JS</a>
+  </div>
+  <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+    <ul class="nav navbar-nav" ng-if="menu.shouldRender(authentication.user);">
+      <li ng-repeat="item in menu.items | orderBy: 'position'" ng-if="item.shouldRender(authentication.user);" ng-switch="item.type" ng-class="{ active: $state.includes(item.state), dropdown: item.type === 'dropdown' }" class="{{item.class}}" dropdown="item.type === 'dropdown'">
+        <a ng-switch-when="dropdown" class="dropdown-toggle" dropdown-toggle role="button">{{::item.title}}&nbsp;<span class="caret"></span></a>
+        <ul ng-switch-when="dropdown" class="dropdown-menu">
+          <li ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(authentication.user);" ui-sref-active="active">
+            <a ui-sref="{{subitem.state}}" ng-bind="subitem.title"></a>
+          </li>
+        </ul>
+        <a ng-switch-default ui-sref="{{item.state}}" ng-bind="item.title"></a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" ng-hide="authentication.user">
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signup">Sign Up</a>
+      </li>
+      <li class="divider-vertical"></li>
+      <li ui-sref-active="active">
+        <a ui-sref="authentication.signin">Sign In</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" ng-show="authentication.user">
+      <li class="dropdown" dropdown>
+        <a class="dropdown-toggle user-header-dropdown-toggle" dropdown-toggle role="button">
+          <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
+          <span ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li ui-sref-active="active">
+            <a ui-sref="settings.profile">Edit Profile</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="settings.picture">Change Profile Picture</a>
+          </li>
+          <li ui-sref-active="active" ng-show="authentication.user.provider === 'local'">
+            <a ui-sref="settings.password">Change Password</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="settings.accounts">Manage Social Accounts</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="/api/auth/signout" target="_self">Signout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+ -->

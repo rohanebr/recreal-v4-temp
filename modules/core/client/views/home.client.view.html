@@ -1,0 +1,525 @@
+<section ng-controller="HomeController">
+  
+
+<!-- banner -->
+    <section class="banner-outer">
+      <div class="hero-header">
+          <div class="inner-hero-header">
+            <div class="container">
+              <div class="text-center logo"> <a href="index.html"><img src="theme/assets/theme/images/recreal-logo.png" alt=""></a></div>
+              <div class="relative"> <i class="fa fa-globe ic-fade-globe"></i> 
+                <!-- form search -->
+                <form class="form-search-home" method="post" action="job_list.html">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>What</label>
+                        <input class="form-control  input-lg" placeholder="job title, keywords or company name">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Where</label>
+                        <input class="form-control input-lg" placeholder="city, province, or region">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-t-primary btn-lg btn-theme btn-pill btn-block">Find a Jobs</button>
+                  </div>
+                  <div class="text-center"> <a href="#modal-advanced" data-toggle="modal">Advanced Job Search</a> </div>
+                </form>
+                <!-- end form search --> 
+              </div>
+            </div>
+          </div>
+      
+          <!-- modal Advanced search -->
+          <div class="modal fade" id="modal-advanced" >
+            <div class="modal-dialog ">
+              <div class="modal-content">
+                <form>
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Advanced Job Search</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h5>Find Jobs</h5>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>With all of these words</label>
+                          <input type="text" class="form-control " name="text" >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>With the exact phrase</label>
+                          <input type="text" class="form-control " name="text" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Show jobs of type</label>
+                      <select class="form-control">
+                        <option value="all">All job types</option>
+                        <option value="fulltime">Full-time</option>
+                        <option value="parttime">Part-time</option>
+                        <option value="contract">Contract</option>
+                        <option value="internship">Internship</option>
+                        <option value="temporary">Temporary</option>
+                      </select>
+                    </div>
+                    <div class="white-space-10"></div>
+                    <h5>Where and When</h5>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Radius </label>
+                          <select id="radius" class="form-control">
+                            <option value="0">only in</option>
+                            <option value="5">within 5 kilometers </option>
+                            <option value="10">within 10 kilometers </option>
+                            <option value="15">within 15 kilometers </option>
+                            <option selected="" value="25">within 25 kilometers </option>
+                            <option value="50">within 50 kilometers </option>
+                            <option value="100">within 100 kilometers </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Of </label>
+                          <input type="text" class="form-control" maxlength="250" value="United States">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Age - Jobs published </label>
+                          <select class="form-control">
+                            <option value="any">anytime</option>
+                            <option value="15">within 15 days</option>
+                            <option value="7">within 7 days</option>
+                            <option value="3">within 3 days</option>
+                            <option value="1">since yesterday</option>
+                            <option value="last">since my last visit</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Display</label>
+                          <select class="form-control">
+                            <option selected="" value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-theme" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success btn-theme">Find Jobs</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- end modal forgot password --> 
+          
+        </div>
+    </section>
+    
+    <!-- box simple static -->
+    <div class="block-section bg-color1">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h3 class="font-2x ">203,285</h3>
+            <h4 class="color-text">Registered Member</h4>
+          </div>
+          <div class="col-md-4">
+            <h3 class="font-2x ">3,603,945</h3>
+            <h4 class="color-text">Joblist Posted</h4>
+          </div>
+          <div class="col-md-4">
+            <h3 class="font-2x ">53,945</h3>
+            <h4 class="color-text">Awesome Company</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end box simple static --> 
+    
+  </div>
+  <!--end body-content --> 
+  
+  <!-- content -->
+  <div class="body-content clearfix bg-color1">
+    <div id="" class=" block-section line-bottom  bg-color2" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <div class="vc_row wpb_row vc_row-fluid">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+              <div class="wpb_wrapper">
+                <div class="wpb_wrapper">
+                  <h2 style="text-align: center;">We can help you get a job</h2>
+                  <p style="text-align: center;">If the job is online, you will find it on JobPlanet</p>
+                </div>
+                <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                  <div class="wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-ic-center "> <i class="fa fa-bookmark-o ic-box"></i>
+                          <h4>Web</h4>
+                          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                          <a href="#" class="btn btn-sm btn-pill btn-theme btn-line dark">Finds a Jobs</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-ic-center "> <i class="fa fa-envelope-o ic-box"></i>
+                          <h4>Email Alert</h4>
+                          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                          <a href="#" class="btn btn-sm btn-pill btn-theme btn-line dark">Register Now</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-ic-center "> <i class="fa fa-mobile ic-box"></i>
+                          <h4>Mobile</h4>
+                          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                          <a href="#" class="btn btn-sm btn-pill btn-theme btn-line dark">Get App</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="" class=" block-section line-bottom  bg-color1" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <div class="vc_row wpb_row vc_row-fluid">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+              <div class="wpb_wrapper">
+                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                  <div class="wpb_column vc_column_container vc_col-sm-8">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="wpb_wrapper">
+                          <h3>Recent Vacancy List</h3>
+                        </div>
+                        <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+                        <div class="jobplanet-vc-job box-list">
+                          <div class="jobplanet-vc-overwrite">
+                            <div class="box-content">
+                              <div class="item job-item post-274 job type-job status-publish hentry job-type-contract job-location-binghamton job-category-education-training">
+                                <div class="row">
+                                  <div class="col-md-2 hidden-sm hidden-xs">
+                                    <div class="img-item"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/logo_box-9-option-1.png" alt="Dream Estate Property"> </div>
+                                  </div>
+                                  <div class="col-md-7 col-sm-12 text-center-sm">
+                                    <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/head-of-talent-development/" class="">Head of Talent Development </a></h4>
+                                    <h5 class="">
+                                      <ul>
+                                        <li> <i class="fa fa-bookmark"></i> <span>Dream Estate Property</span> </li>
+                                        <li> <i class="fa fa-map-marker"></i> <span>Binghamton</span> </li>
+                                      </ul>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 text-right col-sm-12 text-center-sm"> <a href="http://jobplanet.jegtheme.com/job/head-of-talent-development/" class="btn btn-theme btn-t-primary">More Detail</a> </div>
+                                </div>
+                              </div>
+                              <!-- end item list -->
+                              <div class="item job-item post-273 job type-job status-publish hentry job-type-full-time job-location-san-jose job-category-human-resources-recruitment">
+                                <div class="row">
+                                  <div class="col-md-2 hidden-sm hidden-xs">
+                                    <div class="img-item"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/logo_box-6-option-1.png" alt="Petcare Inc."> </div>
+                                  </div>
+                                  <div class="col-md-7 col-sm-12 text-center-sm">
+                                    <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/training-manager-control-room/" class="">Training Manager – Control Room </a></h4>
+                                    <h5 class="">
+                                      <ul>
+                                        <li> <i class="fa fa-bookmark"></i> <span>Petcare Inc.</span> </li>
+                                        <li> <i class="fa fa-map-marker"></i> <span>San Jose</span> </li>
+                                      </ul>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 text-right col-sm-12 text-center-sm"> <a href="http://jobplanet.jegtheme.com/job/training-manager-control-room/" class="btn btn-theme btn-t-primary">More Detail</a> </div>
+                                </div>
+                              </div>
+                              <!-- end item list -->
+                              <div class="item job-item post-272 job type-job status-publish hentry job-type-part-time job-location-san-francisco job-category-information-communication-technology">
+                                <div class="row">
+                                  <div class="col-md-2 hidden-sm hidden-xs">
+                                    <div class="img-item"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/logo_box-1-option-2.png" alt="Fast Company"> </div>
+                                  </div>
+                                  <div class="col-md-7 col-sm-12 text-center-sm">
+                                    <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/ios-applications-developer/" class="">IOS Applications Developer </a></h4>
+                                    <h5 class="">
+                                      <ul>
+                                        <li> <i class="fa fa-bookmark"></i> <span>Fast Company</span> </li>
+                                        <li> <i class="fa fa-map-marker"></i> <span>San Francisco</span> </li>
+                                      </ul>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 text-right col-sm-12 text-center-sm"> <a href="http://jobplanet.jegtheme.com/job/ios-applications-developer/" class="btn btn-theme btn-t-primary">More Detail</a> </div>
+                                </div>
+                              </div>
+                              <!-- end item list -->
+                              <div class="item job-item post-271 job type-job status-publish hentry job-type-full-time job-location-new-york-city job-category-administration-office-support">
+                                <div class="row">
+                                  <div class="col-md-2 hidden-sm hidden-xs">
+                                    <div class="img-item"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/logo_box-4-option-1.png" alt="Heart Check Healthcare"> </div>
+                                  </div>
+                                  <div class="col-md-7 col-sm-12 text-center-sm">
+                                    <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/transaction-services-manager/" class="">Transaction Services Manager </a></h4>
+                                    <h5 class="">
+                                      <ul>
+                                        <li> <i class="fa fa-bookmark"></i> <span>Heart Check Healthcare</span> </li>
+                                        <li> <i class="fa fa-map-marker"></i> <span>New York City</span> </li>
+                                      </ul>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 text-right col-sm-12 text-center-sm"> <a href="http://jobplanet.jegtheme.com/job/transaction-services-manager/" class="btn btn-theme btn-t-primary">More Detail</a> </div>
+                                </div>
+                              </div>
+                              <!-- end item list -->
+                              <div class="item job-item post-270 job type-job status-publish hentry job-type-freelance job-location-rochester job-category-accounting">
+                                <div class="row">
+                                  <div class="col-md-2 hidden-sm hidden-xs">
+                                    <div class="img-item"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/logo_box-10-option-1.png" alt="Gold Fitness Gym"> </div>
+                                  </div>
+                                  <div class="col-md-7 col-sm-12 text-center-sm">
+                                    <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/tax-and-regulatory-compliance/" class="">Tax and Regulatory Compliance </a></h4>
+                                    <h5 class="">
+                                      <ul>
+                                        <li> <i class="fa fa-bookmark"></i> <span>Gold Fitness Gym</span> </li>
+                                        <li> <i class="fa fa-map-marker"></i> <span>Rochester</span> </li>
+                                      </ul>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 text-right col-sm-12 text-center-sm"> <a href="http://jobplanet.jegtheme.com/job/tax-and-regulatory-compliance/" class="btn btn-theme btn-t-primary">More Detail</a> </div>
+                                </div>
+                              </div>
+                              <!-- end item list -->
+                              <nav>
+                                <ul class="pagination pagination-theme no-margin ajax-paging">
+                                  <li><span class="page-numbers current">1</span></li>
+                                  <li><a class="page-numbers" data-page="2" href="http://jobplanet.jegtheme.com/page/2/">2</a></li>
+                                  <li><a class="next page-numbers" data-page="2" href="http://jobplanet.jegtheme.com/page/2/">→</a></li>
+                                </ul>
+                              </nav>
+                            </div>
+                            <div class="jobplanet-box-hidden">
+                              <form>
+                                <input type="hidden" name="currentpage" value="1">
+                                <input type="hidden" name="perpage" value="5">
+                                <input type="hidden" name="action" value="job_vc_page">
+                              </form>
+                            </div>
+                          </div>
+                          <div class="job-vc-overlay">
+                            <div class="load8 load-wrapper">
+                              <div class="loader"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wpb_column vc_column_container vc_col-sm-4">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="wpb_wrapper">
+                          <h3>Featured Vacancy</h3>
+                        </div>
+                        <div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+                        <div class="owl-carousel owl-theme landing-featured" style="opacity: 1; display: block;">
+                          <div class="owl-wrapper-outer">
+                            <div class="owl-wrapper" style="width: 1440px; left: 0px; display: block; transition: all 400ms ease; transform: translate3d(-360px, 0px, 0px);">
+                              <div class="owl-item" style="width: 360px;">
+                                <div class="item featured-job post-272 job type-job status-publish hentry job-type-part-time job-location-san-francisco job-category-information-communication-technology">
+                                  <div class="featured-wrapper">
+                                    <div class="featured-text"> Featured </div>
+                                  </div>
+                                  <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/ios-applications-developer/" class="">IOS Applications Developer </a></h4>
+                                  <h5> <a href="http://jobplanet.jegtheme.com/company/fast-company/"><span class="color-black">Fast Company</span></a> – <span class="color-white-mute">San Francisco, California</span> </h5>
+                                  <p class="text-truncate "></p>
+                                  <p>Sed quis velit eleifend, vulputate lacus eu, porttitor leo. Nunc non urna quis eros vulputate pellentesque a auctor dolor. Nulla non massa nec sem iaculis bibendum sed vitae quam. Nullam non nibh augue. Aenean vestibulum pharetra mattis. Curabitur magna lectus, ornare ac ex et, dapibus suscipit quam. Praesent ante dui,</p>
+                                  <p></p>
+                                  <a href="http://jobplanet.jegtheme.com/job/ios-applications-developer/" class="btn btn-theme btn-success btn-block">More Detail</a> </div>
+                              </div>
+                              <div class="owl-item" style="width: 360px;">
+                                <div class="item featured-job post-266 job type-job status-publish hentry job-type-freelance job-location-los-angeles job-category-sport-recreation">
+                                  <div class="featured-wrapper">
+                                    <div class="featured-text"> Featured </div>
+                                  </div>
+                                  <h4 class="no-margin-top"><a href="http://jobplanet.jegtheme.com/job/gym-instructor-trainner/" class="">Gym Instructor &amp; Trainner </a></h4>
+                                  <h5> <a href="http://jobplanet.jegtheme.com/company/gold-fitness-gym/"><span class="color-black">Gold Fitness Gym</span></a> – <span class="color-white-mute">Los Angeles, California</span> </h5>
+                                  <p class="text-truncate "></p>
+                                  <p>Curabitur ultricies tristique interdum. Phasellus nulla elit, hendrerit sit amet urna a, semper gravida velit. Ut vestibulum eget magna eu vehicula. In vehicula elementum magna, ac porta ante facilisis vitae. Sed aliquet nisl at erat interdum tempus. Nullam in semper odio. Quisque consectetur eget ligula eget ornare. &nbsp; Job Description</p>
+                                  <p></p>
+                                  <a href="http://jobplanet.jegtheme.com/job/gym-instructor-trainner/" class="btn btn-theme btn-success btn-block">More Detail</a> </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end item list --><!-- end item list -->
+                          <div class="owl-controls clickable">
+                            <div class="owl-pagination">
+                              <div class="owl-page"><span class=""></span></div>
+                              <div class="owl-page active"><span class=""></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="" class=" block-section line-bottom " style="padding-top: 60px; padding-bottom: 60px; background-image : url(http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/office-932926_1280.jpg); background-position :  ; background-repeat  : ; background-size : cover; background-attachment : fixed;">
+      <div class="section-overlay" style="background-color: rgba(232,232,232,0.86)"></div>
+      <div class="container">
+        <div class="vc_row wpb_row vc_row-fluid">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+              <div class="wpb_wrapper">
+                <div class="wpb_wrapper">
+                  <div class="wpb_wrapper">
+                    <h2 style="text-align: center;">Testimonial</h2>
+                    <p style="text-align: center;">What people say about jobplanet</p>
+                  </div>
+                </div>
+                <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                  <div class="wpb_column vc_column_container vc_col-sm-3">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-testimonial ">
+                          <div class="desc">
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                            <div class="author"><strong>CEO of Envato</strong></div>
+                          </div>
+                          <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/man-909078_1280-150x150.jpg" alt="collis Taeed"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wpb_column vc_column_container vc_col-sm-3">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-testimonial ">
+                          <div class="desc">
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                            <div class="author"><strong>Oracle Corp</strong></div>
+                          </div>
+                          <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/photo-150x150.jpg" alt="Light Yagami"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wpb_column vc_column_container vc_col-sm-3">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-testimonial ">
+                          <div class="desc">
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                            <div class="author"><strong>VP Microsoft</strong></div>
+                          </div>
+                          <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/entrepreneur-593371_1280-150x150.jpg" alt="Saitama"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wpb_column vc_column_container vc_col-sm-3">
+                    <div class="vc_column-inner ">
+                      <div class="wpb_wrapper">
+                        <div class="box-testimonial ">
+                          <div class="desc">
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, </p>
+                            <div class="author"><strong>CFO JobPlanet</strong></div>
+                          </div>
+                          <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/6-1.jpg" alt="Mika Asaki"> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="" class=" block-section line-bottom  bg-color1" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <div class="vc_row wpb_row vc_row-fluid">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+              <div class="wpb_wrapper">
+                <div class="wpb_wrapper">
+                  <div class="wpb_wrapper">
+                    <h3 style="text-align: left;">Latest Post</h3>
+                  </div>
+                </div>
+                <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+                <div class="row blog-landing ">
+                  <div class="col-md-4 blog-landing-item"> <a href="http://jobplanet.jegtheme.com/2016/01/08/types-of-job-interviews/">
+                    <div class="blog-img"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/painter-931711_1280-400x267.jpg" alt="Tips for Great Impression"> </div>
+                    <h4 class="blog-title"> Why Should We Hire You? Responding to the Job-Interview</h4>
+                    </a>
+                    <p> Mauris elit justo, molestie sed purus eu, porttitor rutrum massa. Cras elementum sollicitudin metus a mollis. Sed congue pulvinar velit at vehicula. In feugiat posuere ex. Duis feugiat, tortor id </p>
+                    <p class="blog-links"> <a href="http://jobplanet.jegtheme.com/2016/01/08/types-of-job-interviews/" class="btn btn-theme btn-line soft"> Reading More &nbsp; → </a> </p>
+                  </div>
+                  <div class="col-md-4 blog-landing-item"> <a href="http://jobplanet.jegtheme.com/2016/01/08/what-should-women-wear-to-a-job-interview/">
+                    <div class="blog-img"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/create-865017_1280-400x267.jpg" alt="Resigning with Class"> </div>
+                    <h4 class="blog-title"> What Should Women Wear to a Job Interview</h4>
+                    </a>
+                    <p> Donec finibus condimentum diam sed aliquet. Cras turpis ante, egestas ac pulvinar ut, ornare in ligula. Quisque at nibh ut ipsum efficitur malesuada nec et tellus. Vestibulum sit amet odio </p>
+                    <p class="blog-links"> <a href="http://jobplanet.jegtheme.com/2016/01/08/what-should-women-wear-to-a-job-interview/" class="btn btn-theme btn-line soft"> Reading More &nbsp; → </a> </p>
+                  </div>
+                  <div class="col-md-4 blog-landing-item"> <a href="http://jobplanet.jegtheme.com/2016/01/08/using-career-success-stories-in-interviews/">
+                    <div class="blog-img"> <img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/office-932926_1280-400x267.jpg" alt="Exceling at Work"> </div>
+                    <h4 class="blog-title"> Using Career Success Stories in Interviews</h4>
+                    </a>
+                    <p> Proin semper velit vitae efficitur fermentum. Sed et elementum ante, a pharetra felis. Nulla sapien arcu, varius sed augue vel, finibus condimentum risus. Aliquam tincidunt congue tortor. Mauris viverra tristique </p>
+                    <p class="blog-links"> <a href="http://jobplanet.jegtheme.com/2016/01/08/using-career-success-stories-in-interviews/" class="btn btn-theme btn-line soft"> Reading More &nbsp; → </a> </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="" class=" block-section line-bottom  bg-color2" style="padding-top: 60px; padding-bottom: 60px;">
+      <div class="container">
+        <div class="vc_row wpb_row vc_row-fluid">
+          <div class="wpb_column vc_column_container vc_col-sm-12">
+            <div class="vc_column-inner ">
+              <div class="wpb_wrapper">
+                <div class="text-center clients "><a href="#"><img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/5.png" alt="Dummy Text"></a><a href="#"><img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/4.png" alt="Dummy Text"></a><a href="#"><img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/2.png" alt="Dummy Text"></a><a href="#"><img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/3.png" alt="Dummy Text"></a><a href="#"><img src="http://jobplanet.jegtheme.com/wp-content/uploads/2016/01/1.png" alt="Dummy Text"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
