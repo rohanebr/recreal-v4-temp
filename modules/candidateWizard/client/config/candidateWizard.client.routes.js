@@ -6,13 +6,13 @@ angular.module('candidateWizard').config(['$stateProvider','$urlRouterProvider',
 			$urlRouterProvider.otherwise('/');
 		// Employer signup wizard state routing
 		$stateProvider.
-		state('candidateStepOne', {
-			url: '/candidateStepOne',
-			templateUrl: 'modules/candidateWizard/client/views/candidateStepOne.client.view.html'
+		state('candidate-step-one', {
+			url: '/candidate-step-one',
+			templateUrl: 'modules/candidateWizard/client/views/candidate-step-one.client.view.html'
 		}).
-		state('candidateStepTwo', {
-			url: '/candidateStepTwo',
-			templateUrl: 'modules/candidateWizard/client/views/candidateStepTwo.client.view.html'
+		state('candidate-step-two', {
+			url: '/candidate-step-two',
+			templateUrl: 'modules/candidateWizard/client/views/candidate-step-two.client.view.html'
 		});
 	}
 ]);
