@@ -1,0 +1,220 @@
+<div class="page-content-wrapper" data-ng-controller="CandidateStepOneController"  data-ng-init="LoadInitialData()">
+    <!-- banner -->
+    <section class="banner-outer">
+    	 <div class="container">
+          <div class="text-center logo"> <a href="index.html"><img src="theme/assets/theme/images/recreal-logo.png" alt=""></a></div>
+        </div>
+    </section>
+
+    <div class="bg-color2 block-section line-bottom">
+      <div class="container">
+        <h1 class="text-center no-margin">Post a Job</h1>
+      </div>
+    </div>
+
+    <div class="bg-color2 block-section line-bottom progress-step">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ol class="progress-meter ">
+                        <li class="progress-point done">Candidate Step One</li>
+                        <!---->
+                        <li class="progress-point done"><a href="http://jobplanet.jegtheme.com/create-vacancy/package/">Candidate Step Two</a></li>
+                            <!---->
+					   <li class="progress-point done"><a href="http://jobplanet.jegtheme.com/create-vacancy/company/">Candidate Step Three</a></li>
+					                            <!---->
+					   <li class="progress-point done"><a href="http://jobplanet.jegtheme.com/create-vacancy/vacancy/">Candidate Step Four</a></li>
+					                            <!---->
+                        <li class="progress-point todo">Review</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="candidate-stepsouter">    
+        <section class="container">
+                <section class="hbox">
+                    <div class="col-sm-12 candidate-steponeright">
+                        <form data-ng-submit="SaveAndRedirect()" id="content" class="scrollable padder ng-pristine ng-invalid ng-invalid-required ng-valid-email">
+                            <article>
+                                <header>
+                                  <h3>Account Information</h3><hr class="hr-margin15">
+                                  <p class="header-message">A few additional details about you will help your employers to know you</p>
+                                </header>
+                                <section class="row section-left-margin">
+                                    <section class="col-md-3">
+                                       <a class="pull-right" ng-click="openCandidatePictureModal()" href=""><i class="fa fa-edit"></i></a>
+                                        <img alt="" class="img180_180">
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" data-ng-model="user.firstName" placeholder="John">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Job Title</label>
+                                            <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" required="" placeholder="Manager IT" data-ng-model="candidate.title">
+                                        </div>
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" data-ng-model="user.lastName" placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email Address</label>
+                                            <input type="email" disabled="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-email" data-ng-model="user.email" placeholder="Carter">
+                                        </div>
+                                    </section>
+                                </section>
+                                <section class="row section-left-margin">
+                                    <div class="row form-group">
+                                        <div class="col-md-3">
+                                            <label for="" class="pull-right">Career Objective</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <textarea class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" required="" data-ng-model="candidate.objective" rows="3" cols="5"></textarea>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="row section-left-margin">
+                                    <section class="col-md-3">
+                                        
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Visa Status</label>
+                                            <span class="ui-select">
+                                                <select data-ng-model="candidate.visa_status" class="form-control ng-pristine ng-untouched ng-valid"><option value="? undefined:undefined ?"></option>
+                                                    <option value="No Visa">No Visa</option>
+                                                    <option value="Residency Visa (Non-Transferable)">Residency Visa (Non-Transferable)</option>
+                                                    <option value="Residency Visa (Transferable)">Residency Visa (Transferable)</option>
+                                                    <option value="Student Visa">Student Visa</option>
+                                                    <option value="Transit Visa">Transit Visa</option>
+                                                    <option value="Visit Visa">Visit Visa</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Gender</label>
+                                            <span class="ui-select">
+                                                <select data-ng-model="candidate.gender" class="form-control ng-pristine ng-untouched ng-valid"><option value="? undefined:undefined ?"></option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Not mentioned">Not mentioned</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </section>
+                                </section>
+                                <section class="row section-left-margin">
+                                    <section class="col-md-3">
+                                        
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+
+                                            <label for="">Country</label>
+                                            <span class="ui-select">
+                                                <select ng-model="candidate.country.name" class="form-control ng-pristine ng-untouched ng-valid" data-ng-change="getCountryCities()"><option value="? undefined:undefined ?"></option>
+                                                    <!-- ngRepeat: count in countries -->
+                                                </select>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Contact No</label>
+                                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" data-ng-model="candidate.contact_no">
+                                        </div>
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Location</label>
+                                            <span class="ui-select">
+                                    <select ng-model="candidate.location" ng-options="sity.name for sity in cities" required="" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required"><option value="?" selected="selected" label=""></option></select>
+                                  </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Skype ID</label>
+                                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" data-ng-model="candidate.skype_name">
+                                        </div>
+                                    </section>
+                                </section>
+                                <section class="row section-left-margin">
+                                    <section class="col-md-3">
+                                        
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Career Level</label>
+                                            <span class="ui-select">
+                                                <select data-ng-model="candidate.career_level" class="form-control ng-pristine ng-untouched ng-valid"><option value="? undefined:undefined ?"></option>
+                                                    <option value="Student/Internship">Student/Internship</option>
+                                                    <option value="Entry Level">Entry Level</option>
+                                                    <option value="Mid Career">Mid Career</option>
+                                                    <option value="Management">Management</option>
+                                                    <option value="Executive (Director)">Executive (Director)</option>
+                                                    <option value="Senior Executive (CEO)">Senior Executive (CEO)</option>
+                                                </select>
+                                            </span> 
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Employment Status</label>
+                                            <span class="ui-select">
+                                                <select data-ng-model="candidate.employee_status" class="form-control ng-pristine ng-untouched ng-valid"><option value="? undefined:undefined ?"></option>
+                                                    <option value="Part Time">Part Time</option>
+                                                    <option value="Full Time">Full Time</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </section>
+                                    <section class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Employee Type</label>
+                                            <span class="ui-select">
+                                                <select data-ng-model="candidate.employee_type" class="form-control ng-pristine ng-untouched ng-valid"><option value="? undefined:undefined ?"></option>
+                                                    <option value="Permanent">Permanent</option>
+                                                    <option value="Internship">Internship</option>
+                                                    <option value="Contractor">Contractor</option>
+                                                    <option value="Temporary">Temporary</option>
+                                                    <option value="Internship">Internship</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Salary Range</label>
+                                            <span class="ui-select">
+                                                <select data-ng-model="candidate.salary_expectation" class="form-control ng-pristine ng-untouched ng-valid"><option value="? undefined:undefined ?"></option>
+                                                    <option value="Less than $1000">Less than $1000</option>
+                                                    <option value="$1000 - $2000">$1000 - $2000</option>
+                                                    <option value="$2000 - $3000">$2000 - $3000</option>
+                                                    <option value="$3000 - $4000">$3000 - $4000</option>
+                                                    <option value="$4000 - $5000">$4000 - $5000</option>
+                                                    <option value="$5000 - $6000">$5000 - $6000</option>
+                                                    <option value="$6000 - $8000">$6000 - $8000</option>
+                                                    <option value="$8000 - $10000">$8000 - $10000</option>
+                                                    <option value="$10000 - $15000">$10000 - $15000</option>
+                                                    <option value="$15000 - $20000">$15000 - $20000</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </section>
+                                </section>
+                                <footer class="footer-button-div">
+                                  <section class="col-md-2 pull-right">
+                                    <button type="submit" class="btn btn-primary btn-block btn-lg">Next</button>  
+                                  </section>
+                                </footer>
+                            </article>                       
+                            <section data-ng-show="error" class="text-danger ng-hide"><strong data-ng-bind="error" class="ng-binding"></strong>
+                            </section>
+                            <a href="#!" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+                         </form>
+                    </div>     
+                </section>
+            </section> 
+    </div>
+            
+</div>
