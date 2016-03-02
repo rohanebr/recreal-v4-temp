@@ -9,6 +9,10 @@ angular.module('employerWizard').config(['$stateProvider','$urlRouterProvider',
 		state('employer-step-one', {
 			url: '/employer-step-one',
 			templateUrl: 'modules/employerWizard/client/views/employer-step-one.client.view.html'
+		}).
+		state('employer-step-two', {
+			url: '/employer-step-two',
+			templateUrl: 'modules/employerWizard/client/views/employer-step-two.client.view.html'
 		});
 	}
 ]);
