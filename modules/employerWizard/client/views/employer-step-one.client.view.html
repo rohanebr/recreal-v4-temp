@@ -1,4 +1,4 @@
-<div class="page-content-wrapper" data-ng-controller="EmployerStepOneController"  data-ng-init="LoadInitialData()">
+<div class="page-content-wrapper" data-ng-controller=""  data-ng-init="">
     <!-- banner -->
     <section class="banner-outer">
     	 <div class="container">
@@ -8,7 +8,7 @@
 
     <div class="bg-color2 block-section line-bottom">
       <div class="container">
-        <h1 class="text-center no-margin">Post a Job</h1>
+        <h1 class="text-center no-margin">Company Profile</h1>
       </div>
     </div>
 
@@ -17,15 +17,15 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <ol class="progress-meter ">
-                        <li class="progress-point done">Login / Register</li>
+                        <li class="progress-point done">Profile</li>
                         <!---->
-                        <li class="progress-point done"><a href="http://jobplanet.jegtheme.com/create-vacancy/package/">Package</a></li>
+                        <li class="progress-point todo"><a href="http://jobplanet.jegtheme.com/create-vacancy/package/">Location</a></li>
                             <!---->
-					   <li class="progress-point done"><a href="http://jobplanet.jegtheme.com/create-vacancy/company/">Company</a></li>
+					   <li class="progress-point "><a href="http://jobplanet.jegtheme.com/create-vacancy/company/">Job Details</a></li>
 					                            <!---->
-					   <li class="progress-point done"><a href="http://jobplanet.jegtheme.com/create-vacancy/vacancy/">Vacancy</a></li>
+					   <li class="progress-point"><a href="http://jobplanet.jegtheme.com/create-vacancy/vacancy/">Job Requirement</a></li>
 					                            <!---->
-                        <li class="progress-point todo">Review</li>
+                        <li class="progress-point ">Review</li>
                     </ol>
                 </div>
             </div>
@@ -36,197 +36,141 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-
-            <!-- form post a job -->
-            <form>
-              <div class="form-group">
-                <label>Company</label>
-                <input type="text" class="form-control "  placeholder="Enter Company Name">
-              </div>
-              <div class="form-group">
-                <label>Job title</label>
-                <input type="text" class="form-control "  placeholder="Enter Job Title">
-              </div>
-              <div class="form-group">
-                <label>Job description</label>
-                <div class="color-white-mute"><small>Describe the responsibilities of this job, required work experience, skills, or education.</small></div>
-                <textarea class="form-control" rows="6" placeholder="Enter Job Description"></textarea>
-                <small class="color-white-mute">Formatting Options:    ##heading      *bold*          _italic_          * bulleted list</small>
-              </div>
-              <div class="form-group">
-                <label>Locations (optional)</label>
-                <input type="text" class="form-control "  placeholder="Enter Location">
-              </div>
-
-              <!-- checkboxs -->
-              <div class="form-group">
-                <label>Job Categories</label>
-                <div class="row clearfix">
-                  <div class="col-md-4">
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Accounting
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Admin &amp; HR
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Banking  /  Finance
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Beauty Care  /  Health
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Building &amp; Construction
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Design
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Education
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox"> 
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Engineering
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Hospitality  /  F &amp; B
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Information Technology (IT)
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Insurance
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Management
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Manufacturing
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Media &amp; Advertising
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Property
-                      </label>
-                    </div>
-                    <div class="checkbox flat-checkbox">
-                      <label>
-                        <input type="checkbox"> 
-                        <span class="fa fa-check"></span>
-                        Others
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- end checkboxs -->
-
-
-              <div class="form-group">
-                <label>Salary (optional)</label>
-                <div class="row clearfix">
-                  <div class="col-xs-6">
-                    <input type="text" class="form-control "  placeholder="Example: 50,000.00">
-                  </div>
-                  <div class="col-xs-6">
-                    <select class="form-control">
-                      <option>per hour</option>
-                      <option>per day</option>
-                      <option>per week</option>
-                      <option>per month</option>
-                      <option>per year</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Experience (optional)</label>
-                <div class="row clearfix">
-                  <div class="col-xs-6">
-                    <input type="text" class="form-control "  placeholder="Example: Accounting">
-                  </div>
-                  <div class="col-xs-6">
-                    <select class="form-control">
-                      <option>1 year</option>
-                      <option>2 years</option>
-                      <option>3 years</option>
-                      <option>4 years</option>
-                      <option>5 years</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <p>Applications will be emailed to: <a href="#">your@email.com</a> – <a href="#">change email</a></p>
-
-              <div class="form-group ">
-                <button class="btn btn-t-primary btn-theme">Continue</button>
-              </div>
-
-
-            </form> <!-- end form post a job -->
-          </div>
+				<h2>About You</h2>
+				<p>A few additional details about you will help your colleagues to know you</p>
+				<div class="row about-you-cont">
+					<div class="col-md-3">
+						<div class="profile-img">
+							<img src="theme/assets/theme/images/people/1.jpg" class="img-rounded" alt="">
+							<a href="#">Upload Image</a>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label>First Name</label>
+								<input type="text" class="form-control "  placeholder="Enter First Name">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Last Name</label>
+								<input type="text" class="form-control "  placeholder="Enter Last Name">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Email Address</label>
+								<input type="text" class="form-control "  placeholder="Enter Email Address">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Role</label>
+								<select class="form-control">
+								  <option>Admin</option>
+								  <option>Admin</option>
+								  <option>Admin</option>
+								  <option>Admin</option>
+								  <option>Admin</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<h2>About Your Company</h2>
+				<p>A few additional details about your Comapany will help candidates to know about you</p>
+				<div class="row about-you-cont">
+					<div class="col-md-3">
+						<div class="profile-img">
+							<img src="theme/assets/theme/images/people/1.jpg" class="img-rounded" alt="">
+							<a href="#">Upload Image</a>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label>Company Name</label>
+								<input type="text" class="form-control "  placeholder="Enter First Name">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Industry</label>
+								<select class="form-control">
+								  <option>Accounting</option>
+								  <option>Accounting</option>
+								  <option>Accounting</option>
+								  <option>Accounting</option>
+								  <option>Accounting</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label>Website</label>
+								<input type="text" class="form-control "  placeholder="Enter Last Name">
+							</div>
+							<div class="form-group col-md-6">
+								<label>Company Type</label>
+								<select class="form-control">
+								  <option>Sole Proprietorship</option>
+								  <option>Sole Proprietorship</option>
+								  <option>Sole Proprietorship</option>
+								  <option>Sole Proprietorship</option>
+								  <option>Sole Proprietorship</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label>No of Employees</label>
+								<select class="form-control">
+								  <option>1 - 10</option>
+								  <option>1 - 10</option>
+								  <option>1 - 10</option>
+								  <option>1 - 10</option>
+								  <option>1 - 10</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label>Country</label>
+								<select class="form-control">
+								  <option></option>
+								  <option></option>
+								  <option></option>
+								  <option></option>
+								  <option></option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label>City</label>
+								<select class="form-control">
+								  <option></option>
+								  <option></option>
+								  <option></option>
+								  <option></option>
+								  <option></option>
+								</select>
+							</div>
+							<div class="form-group col-md-12">
+								<label>Company Name</label>
+								<div class="color-white-mute"><small>Write few lines about your Company.</small></div>
+								<textarea class="form-control" rows="6" placeholder="Enter Job Description"></textarea>
+							</div>
+							<div class="form-group col-md-12">
+								<label>Specialities</label><br />
+								<a href="#">+ Add Speciality</a>
+							</div>
+							<div class="form-group col-md-8">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+									<span class="input-group-addon" id="basic-addon2">X</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group col-md-8 add-list-cont">
+										<input name="" type="text" class="form-control col-md-12" />
+										<input name="" type="button" class="btn btn-default" value="Add" />
+										<input name="" type="button" class="btn btn-default" value="Done" />
+							</div>
+							<div class="form-group col-md-12">
+								<button class="btn btn-t-primary btn-theme">Continue</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
         </div>
       </div>
     </div> 
