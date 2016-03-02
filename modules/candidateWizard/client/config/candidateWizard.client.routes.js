@@ -8,11 +8,15 @@ angular.module('employerWizard').config(['$stateProvider','$urlRouterProvider',
 		$stateProvider.
 		state('candidate-step-one', {
 			url: '/candidate-step-one',
-			templateUrl: 'modules/employerWizard/client/views/candidate-step-one.client.view.html'
+			templateUrl: 'modules/candidateWizard/client/views/candidate-step-one.client.view.html'
 		}).
 		state('candidate-step-two', {
 			url: '/candidate-step-two',
-			templateUrl: 'modules/employerWizard/client/views/candidate-step-two.client.view.html'
+			templateUrl: 'modules/candidateWizard/client/views/candidate-step-two.client.view.html'
+		}).
+		state('candidate-step-three', {
+			url: '/candidate-step-three',
+			templateUrl: 'modules/candidateWizard/client/views/candidate-step-three.client.view.html'
 		});
 	}
 ]);
