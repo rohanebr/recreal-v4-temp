@@ -1,0 +1,6 @@
+.profile-img { text-align:center; }
+
+.about-you-cont { padding-top:10px; padding-bottom:15px; margin-bottom:20px; }
+.about-you-cont .profile-img { margin-top:10px; }
+.add-list-cont { padding-bottom:20px; }
+.add-list-cont input[type="text"] { margin-bottom:5px;  }
