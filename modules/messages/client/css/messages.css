@@ -1,0 +1,30 @@
+.account-right-side { background: #ffffff; position: relative; min-height: 800px; border-left: 1px solid #e1e1e1; }
+.message-list { border-right:1px solid #e1e1e1; min-height: 800px; }
+.message-list ul { padding:0; list-style:none; border-top:1px solid #eee;  }
+.message-list ul li {   border-bottom:1px solid #e1e1e1; padding:5px 15px; }
+.message-list ul li .block { display:block; }
+.message-list ul::after { clear:both; content:''; display:block; }
+.btn-tootlbar { padding:10px; }
+.btn-tootlbar .next-main { text-align:center; }
+.btn-tootlbar .next-btn { padding: 5px 10px; font-size: 12px; border:1px solid #e1e1e1; border-radius:3px; display:inline-block; cursor:pointer; }
+.btn-tootlbar .refresh-main { text-align:right; }
+.btn-tootlbar .refresh-btn { padding: 5px 10px; font-size: 12px; border:1px solid #e1e1e1; border-radius:3px; display:inline-block; cursor:pointer; } 
+
+.chat-mid-cont .chat-detail-cont { padding:0 16px 0 0; font-family:"Open Sans",Arial, Helvetica, sans-serif }
+.chat-mid-cont .chat-detail-cont ul { padding:0; margin:0; list-style:none; }
+.chat-mid-cont .chat-detail-cont ul li { padding-bottom:21px; }
+.chat-mid-cont .chat-detail-cont ul li:after { clear:both; content:""; display:block; }
+.chat-mid-cont .message-section { position:relative; }
+.chat-mid-cont .message-col { margin:0 45px 0 0; }
+.chat-mid-cont .name-col { margin:44px 0 0 0; width:30px; height:30px; background:#1bb63a; color:#fff; text-align:center; font-size:14px; line-height:30px; position:absolute; text-transform:uppercase; border-radius:50%; right:0; }
+.chat-mid-cont .message-col p { color:#898989; line-height:14px; font-size:12px; text-align:right; }
+.chat-mid-cont .message-col .message-text { background:#f5f5f5; border-radius:8px 8px 0 8px; padding:8px 23px 9px 24px; margin:5px 0 0 0; min-height:49px; text-align:left; font-size:14px; line-height:16px; font-weight:400; }
+.chat-mid-cont .message-col .time-date { text-align:right; font-size:12px; color:#898989; margin:3px 0 0 0; }
+.chat-mid-cont .left-chat .name-col  { left:0; }
+.chat-mid-cont .left-chat .message-text { background:#2a3f54; border-radius:8px 8px 8px 0; color:#fff; }
+.chat-mid-cont .left-chat .message-col { margin:0 0 0 45px; }
+.chat-mid-cont .left-chat .message-col p { text-align:left; }
+.chat-mid-cont .message-editor-cont { position:relative; margin:30px 0 0 0; }
+.chat-mid-cont .message-editor-cont:after { clear:both; content:""; display:block; }
+.chat-mid-cont .message-editor-cont input[type="text"] { height:40px; line-height:40px;  margin:0 0 0 0; float:left; margin:0; resize:none; padding:10px 15px; width:90%; border:1px solid #e1e1e1; border-radius:4px 0 0 4px; }
+.chat-mid-cont .message-editor-cont .send-btn { font-size:12px; height:40px; line-height:40px;  text-transform:uppercase; vertical-align:top; float:left; cursor:pointer; width:10%; box-sizing:border-box; background:#2a3f54; border:0; color:#fff; border-radius:0 4px 4px 0; }
