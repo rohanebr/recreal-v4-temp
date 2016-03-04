@@ -17,6 +17,10 @@ angular.module('employerWizard').config(['$stateProvider','$urlRouterProvider',
 		state('candidate-step-three', {
 			url: '/candidate-step-three',
 			templateUrl: 'modules/candidateWizard/client/views/candidate-step-three.client.view.html'
+		}).
+		state('candidate-step-four', {
+			url: '/candidate-step-four',
+			templateUrl: 'modules/candidateWizard/client/views/candidate-step-four.client.view.html'
 		});
 	}
 ]);

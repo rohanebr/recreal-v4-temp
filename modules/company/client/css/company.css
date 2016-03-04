@@ -1,0 +1,9 @@
+/*Company Homepage */
+.basic-info-about li {
+    width: 48%;
+    vertical-align: top;
+}
+.basic-info-about li h4 {
+	margin:0;
+	padding-bottom:0;
+}

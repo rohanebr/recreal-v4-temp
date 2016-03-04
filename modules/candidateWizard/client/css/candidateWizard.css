@@ -18,3 +18,4 @@ ol.progress-meter li:first-child { margin:0; }
 .step-addbtnouter .stepadd-detailinner {}
 .step-addbtnouter .stepadd-detailinner p span { font-size:11px; }
 .step-addbtnouter .stepadd-popup { display:inline-block; width:70%; margin-bottom:20px; background-color:#fafafa; padding:12px 15px; border-radius:2px; border:1px solid #eee; }
+.stepfour-outer img { margin:0 0 20px 0; }
