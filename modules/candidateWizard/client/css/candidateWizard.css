@@ -1,3 +1,4 @@
+h2 { margin:0; }
 .nopadding { padding:0; }
 ol.progress-meter { text-align:center; }
 ol.progress-meter li { width:19%; margin:0 0 0 10px; }
@@ -7,3 +8,13 @@ ol.progress-meter li:first-child { margin:0; }
 .about-you-cont .profile-img { margin-top:10px; }
 .add-list-cont { padding-bottom:20px; }
 .add-list-cont input[type="text"] { margin-bottom:5px;  }
+.about-you-cont textarea { display:inline-block; width:100%; padding:6px 12px; border-radius:2px; overflow:hidden; resize:none; border:1px solid #ccc; font-size:14px; }
+.steptwo-detail { margin-bottom:20px; }
+.step-addbtnouter { position:relative; }
+.step-addbtnouter .stepadd-detail {  }
+.step-addbtnouter .stepadd-detailtitle { }
+.step-addbtnouter .stepadd-detailtitle h4 { margin: 0; }
+.step-addbtnouter .stepadd-detailtitle span { display:inline-block; margin:0 0 0 20px; font-size:18px; color:#333; line-height:22px; cursor:pointer; }
+.step-addbtnouter .stepadd-detailinner {}
+.step-addbtnouter .stepadd-detailinner p span { font-size:11px; }
+.step-addbtnouter .stepadd-popup { display:inline-block; width:70%; margin-bottom:20px; background-color:#fafafa; padding:12px 15px; border-radius:2px; border:1px solid #eee; }
