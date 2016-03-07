@@ -18,23 +18,10 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
     // Collapsing the menu after navigation
     $scope.$on('$stateChangeSuccess', function () {
       $scope.isCollapsed = false;
+
+      // added by muddaser let the page scroll to top on state change
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
-
-    // open signin
-    $scope.OpenSigninModal = function() {
-        var modalInstance = $modal.open({
-            templateUrl: 'modules/users/client/views/partials/signin-modal.partial.client.view.html',
-            controller: 'AuthenticationController'
-        });
-        modalInstance.result.then(function(result) {
-            console.log(result);
-            //    $scope.sendmessage = result.sendmessage;
-        },
-        function() {
-
-        });
-    };
-
 
   }
 ]);

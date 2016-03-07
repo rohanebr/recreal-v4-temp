@@ -1,0 +1,9 @@
+/*Job page */
+.basic-info-job li {
+    width: 32%;
+    vertical-align: top;
+}
+.basic-info-job li h4 {
+	margin:0;
+	padding-bottom:0;
+}

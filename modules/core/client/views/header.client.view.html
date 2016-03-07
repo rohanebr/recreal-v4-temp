@@ -1,22 +1,55 @@
-<!-- main-header -->
 <header class="main-header" ng-controller="HeaderController"> 
   
   <!-- main navbar -->
   <nav class="navbar navbar-default main-navbar hidden-sm hidden-xs">
     <div class="container">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav"  ng-hide="authentication.user">
           <li class=""><a ui-sref="home"><strong>Home</strong></a></li>
           <li class=""><a ui-sref="blog"><strong>Blog</strong></a></li>
           <li  class=""><a ui-sref="about"><strong>About</strong></a></li>
           <li  class=""><a ui-sref="contact"><strong>Contact</strong></a></li>
           <li  class=""><a ui-sref="employersinfo"><strong>Employers</strong></a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="link-btn"><a href="login.html"><span ng-click="OpenSigninModal()" class="btn btn-theme btn-pill btn-xs btn-line">Login</span></a></li>
-          <li class="link-btn"><a href="register.html"><span class="btn btn-theme  btn-pill btn-xs btn-line">Submit Resume</span></a></li>
-          <li class="link-btn"><a href="register.html"><span class="btn btn-theme  btn-pill btn-xs btn-line">Register Company</span></a></li>
+        <ul class="nav navbar-nav navbar-right"  ng-hide="authentication.user">
+          <li class="link-btn"><a href="login.html"><span ui-sref="authentication.signin" class="btn btn-theme btn-pill btn-xs btn-line">Login</span></a></li>
+          <li class="link-btn"><a ui-sref="authentication.signup"><span class="btn btn-theme  btn-pill btn-xs btn-line">Submit Resume</span></a></li>
+          <li class="link-btn"><a ui-sref="authentication.signup"><span class="btn btn-theme  btn-pill btn-xs btn-line">Register Company</span></a></li>
         </ul>
+        <!-- for logged in user -->
+        <ul class="nav navbar-nav" ng-show="authentication.user">
+            <span style="">
+              <a href="/" class="text-center">
+                <img src="./assets/theme/images/recreal-logo.png" alt="recreal" class="img-responsive center-block" style="width: 60%;">
+              </a>
+            </span>        
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-show="authentication.user">
+          <li class="dropdown">
+            <a href="#" class="link-profile dropdown-toggle"  data-toggle="dropdown" >
+              <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="img-profile"> &nbsp; {{authentication.user.displayName}} <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li ui-sref-active="active">
+                <a ui-sref="settings.profile">Edit Profile</a>
+              </li>
+              <li ui-sref-active="active">
+                <a ui-sref="settings.picture">Change Profile Picture</a>
+              </li>
+              <li ui-sref-active="active" ng-show="authentication.user.provider === 'local'">
+                <a ui-sref="settings.password">Change Password</a>
+              </li>
+              <li ui-sref-active="active">
+                <a ui-sref="settings.accounts">Manage Social Accounts</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="/api/auth/signout" target="_self">Signout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- close for logged in user controls -->
       </div>
     </div>
   </nav>
@@ -47,11 +80,11 @@
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Features <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="job_list.html">Find a Job</a></li>
-              <li><a href="job_details.html">Job Details</a></li>
+              <li><a ui-sref="job">Job Details</a></li>
               <li><a href="resume_list.html">Find Resumes</a></li>
-              <li><a href="resume_details.html">Resume Details</a></li>
+              <li><a ui-sref="candidate-cv">Resume Details</a></li>
               <li><a href="job_post_2.html">Post a Job</a></li>
-              <li><a href="company_page.html">Company Profile</a></li>
+              <li><a ui-sref="company">Company Profile</a></li>
             </ul>
           </li>
         </ul>
@@ -123,4 +156,3 @@
     </ul>
   </nav>
 </div>
- -->

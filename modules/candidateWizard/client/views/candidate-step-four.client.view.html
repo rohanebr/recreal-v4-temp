@@ -1,4 +1,4 @@
-<div class="page-content-wrapper" data-ng-controller=""  data-ng-init="">
+<div class="page-content-wrapper" data-ng-controller="CandidateStepFourController"  data-ng-init="LoadInitialData()">
     
     <!-- banner -->
     <section class="banner-outer">
@@ -38,8 +38,8 @@
         <div class="row">
         	<div class="col-md-8 col-md-offset-2 stepfour-outer">
             	<img src="./assets/theme/images/candidate-stepmapthumbnail.jpg" alt="" title="" class="img-responsive" >
-                <button class="btn btn-t-primary btn-theme">Back</button>
-                <button class="btn btn-t-primary btn-theme">Next</button>
+                <button class="btn btn-t-primary btn-theme" ui-sref="candidate-step-three">Back</button>
+                <button class="btn btn-t-primary btn-theme" ui-sref="candidate-jobs">Next</button>
             </div>
             <div class="clearfix"></div>
         </div>

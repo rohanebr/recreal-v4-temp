@@ -1,4 +1,4 @@
-<div class="page-content-wrapper" data-ng-controller=""  data-ng-init="">
+<div class="page-content-wrapper" data-ng-controller="CandidateStepThreeController"  data-ng-init="LoadInitialData()">
     
     <!-- banner -->
     <section class="banner-outer">
@@ -60,10 +60,9 @@
                         your employers to know youA few additional details about you will help your employers to know you</textarea>
 					</div>
 				</div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button class="btn btn-t-primary btn-theme">Next</button>
-                    </div>
+                <div class="step-btns">
+                    <button class="btn btn-t-primary btn-theme" ui-sref="candidate-step-two">Back</button>
+                    <button class="btn btn-t-primary btn-theme" ui-sref="candidate-step-four">Next</button>
                 </div>
 			</div>
         </div>

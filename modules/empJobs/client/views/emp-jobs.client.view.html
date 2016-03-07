@@ -11,14 +11,14 @@
                           <h4>Demo Applicant</h4>
                           <div class="white-space-20"></div>
                              <ul class="list-unstyled nav-sidebar account">
-                                  <li><a href="http://jobplanet.jegtheme.com/account/edit-account/"> Active Jobs</a></li>
-                                  <li><a href="http://jobplanet.jegtheme.com/account/change-password/"> Draft Jobs </a></li>
-                                  <li><a href="http://jobplanet.jegtheme.com/account/manage-application/"> Expired Jobs </a></li>
-                                  <li><a href="http://jobplanet.jegtheme.com/account/resumes/"> Favorite Candidates</a></li>
-                                  <li><a href="http://jobplanet.jegtheme.com/account/follow-company/"> Manage Company </a></li>                            
+                                  <li><a ui-sref="emp-jobs"> Active Jobs</a></li>
+                                  <li><a ui-sref="emp-jobs"> Draft Jobs </a></li>
+                                  <li><a ui-sref="emp-jobs"> Expired Jobs </a></li>
+                                  <li><a href="#"> Favorite Candidates</a></li>
+                                  <li><a ui-sref="company"> Manage Company </a></li>                            
                               </ul>
                           <div class="list-unstyled"></div>
-                              <a href="http://jobplanet.jegtheme.com/account/create-alert/" class="btn btn-theme btn-t-primary btn-block">Post a New Job</a>
+                              <a href="job-step-one" class="btn btn-theme btn-t-primary btn-block">Post a New Job</a>
                           </div>
                   </div>
                   <div class="col-md-9 col-sm-9">
@@ -35,48 +35,30 @@
                               <tr>
                                   <th>Job</th>
                                   <th class="text-center">Status</th>
-                                  <th class="text-center">Closig</th>
+                                  <th class="text-center">Closing</th>
                                   <th class="text-center">Applications</th>
                               </tr>
                               </thead>
                               <tbody>
 
-                                              <tr>
-                                      <td><a target="_blank" href="http://jobplanet.jegtheme.com/job/head-of-talent-development/">Head of Talent Development</a></td>
-                                      <td class="text-center"><a target="_blank" href="http://jobplanet.jegtheme.com/company/dream-estate-property/">Dream Estate Property</a></td>
-                                      <td class="text-center"><span class="post-status post-status-pending">Pending</span></td>
-                                      <td class="text-center">
-                                          <div class="btn-group">
-                                          <a href="http://jobplanet.jegtheme.com/account/detail-application/504" data-toggle="tooltip" data-placement="top" title="" class="btn btn-theme btn-xs btn-default btn-success" data-original-title="Detail">
-                                              <i class="fa fa-eye"></i>
-                                          </a>
-                                          </div>
-                                      </td>
-                                  </tr>
-                                                  <tr>
-                                      <td><a target="_blank" href="http://jobplanet.jegtheme.com/job/transaction-services-manager/">Transaction Services Manager</a></td>
-                                      <td class="text-center"><a target="_blank" href="http://jobplanet.jegtheme.com/company/heart-check-healthcare/">Heart Check Healthcare</a></td>
-                                      <td class="text-center"><span class="post-status post-status-pending">Pending</span></td>
-                                      <td class="text-center">
-                                          <div class="btn-group">
-                                          <a href="http://jobplanet.jegtheme.com/account/detail-application/501" data-toggle="tooltip" data-placement="top" title="" class="btn btn-theme btn-xs btn-default btn-success" data-original-title="Detail">
-                                              <i class="fa fa-eye"></i>
-                                          </a>
-                                          </div>
-                                      </td>
-                                  </tr>
-                                                  <tr>
-                                      <td><a target="_blank" href="http://jobplanet.jegtheme.com/job/general-manager-of-operations/">General Manager of Operations</a></td>
-                                      <td class="text-center"><a target="_blank" href="http://jobplanet.jegtheme.com/company/heart-check-healthcare/">Heart Check Healthcare</a></td>
-                                      <td class="text-center"><span class="post-status post-status-pending">Pending</span></td>
-                                      <td class="text-center">
-                                          <div class="btn-group">
-                                          <a href="http://jobplanet.jegtheme.com/account/detail-application/454" data-toggle="tooltip" data-placement="top" title="" class="btn btn-theme btn-xs btn-default btn-success" data-original-title="Detail">
-                                              <i class="fa fa-eye"></i>
-                                          </a>
-                                          </div>
-                                      </td>
-                                  </tr>
+                                <tr>
+                                  <td><a ui-sref="job">Head of Talent Development</a></td>
+                                  <td class="text-center"><span class="post-status post-status-pending">Pending</span></td>
+                                  <td class="text-center">03-Jun-2016</td>
+                                  <td class="text-center"><a ui-sref="job-apps">213</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a ui-sref="job">Transaction Services Manager</a></td>
+                                  <td class="text-center"><span class="post-status post-status-pending">Pending</span></td>
+                                  <td class="text-center">03-Jun-2016</td>
+                                  <td class="text-center"><a ui-sref="job-apps">213</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a ui-sref="job">General Manager of Operations</a></td>
+                                  <td class="text-center"><span class="post-status post-status-pending">Pending</span></td>
+                                  <td class="text-center">03-Jun-2016</td>
+                                  <td class="text-center"><a ui-sref="job-apps">213</a></td>
+                                </tr>
                               </tbody>
                             </table>
                                           <nav>
