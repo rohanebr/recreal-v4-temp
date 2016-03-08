@@ -1,5 +1,61 @@
 <section class="row" ng-controller="AuthenticationController">
-  <h3 class="col-md-12 text-center">Sign in using your social accounts</h3>
+<!-- banner -->
+        <section class="banner-outer">
+        	<div class="container">
+              <div class="text-center logo"> <a href="index.html"><img src="assets/theme/images/logo.png" alt=""></a></div>
+            </div>
+
+        </section>
+
+        <div class="block-section bg-color4">
+          <div class="container">
+            <div class="panel panel-md">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12 social-icons">
+                    <!-- buttons top -->
+                    <p><a href="#" class="btn btn-primary btn-theme btn-block" ng-click="callOauthProvider('/api/auth/facebook')" ><i class="fa fa-facebook"></i></a></p>
+                    <p><a href="#" class="btn btn-danger btn-theme btn-block" ng-click="callOauthProvider('/api/auth/twitter')" ><i class="fa fa-twitter"></i></a></p>
+					<p><a href="#" class="btn btn-primary btn-theme btn-block" ng-click="callOauthProvider('/api/auth/google')" ><i class="fa fa-google-plus"></i></a></p>
+                    <p><a href="#" class="btn btn-danger btn-theme btn-block" ng-click="callOauthProvider('/api/auth/linkedin')" ><i class="fa fa-linkedin"></i></a></p>
+					<p><a href="#" class="btn btn-primary btn-theme btn-block" ng-click="callOauthProvider('/api/auth/github')" ><i class="fa fa-github"></i></a></p>
+                    <p><a href="#" class="btn btn-danger btn-theme btn-block" ng-click="callOauthProvider('/api/auth/paypal')" ><i class="fa fa-cc-paypal"></i></a></p>
+                    <!-- end buttons top -->
+
+                    <div class="white-space-10"></div>
+					<div class="clearfix"></div>
+                    <p class="text-center"><span class="span-line">OR</span></p>
+
+                   <div ui-view></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="white-space-20"></div>
+            <div class="text-center color-white">Not a member? &nbsp; <a ui-sref="authentication.signup" class="link-white"><strong>Create a account free</strong></a></div>
+          </div>
+        </div>
+
+        <!-- box bottom -->
+        <div class="block-section bg-color2">
+          <div class="container text-center">
+            <i class="fa fa-mobile-phone fa-5x box-icon"></i>
+            <h2 class=""> Find jobs with your phone</h2>
+
+            <p>Download the JobPlanet app from the</p>
+            <a href="#" class="btn btn-theme btn-default"><i class="fa fa-android bordered-right dark"></i> Android</a>
+            <span class="space-inline-10"></span>
+            <a href="#" class="btn btn-theme btn-default"><i class="fa fa-apple bordered-right dark"></i> Iphone</a>
+          </div>
+        </div><!-- end box bottom -->
+
+
+
+
+
+<!--  <h3 class="col-md-12 text-center">Sign in using your social accounts</h3>
   <div class="col-md-12 text-center">
     <img ng-click="callOauthProvider('/api/auth/facebook')" ng-src="/modules/users/client/img/buttons/facebook.png">
     <img ng-click="callOauthProvider('/api/auth/twitter')" ng-src="/modules/users/client/img/buttons/twitter.png">
@@ -8,5 +64,20 @@
     <img ng-click="callOauthProvider('/api/auth/github')" ng-src="/modules/users/client/img/buttons/github.png">
     <img ng-click="callOauthProvider('/api/auth/paypal')"  ng-src="/modules/users/client/img/buttons/paypal.png">
   </div>
-  <div ui-view></div>
+  
+-->  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </section>

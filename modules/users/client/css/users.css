@@ -40,3 +40,16 @@
 *   Sign in modal
 */
 .login-modal-dialog {width: 500px;}
+
+.logo-header {
+	width: 60%;
+	margin-top: 10px;
+}
+
+
+.social-icons { text-align:center; }
+.social-icons p { display:inline-block; }
+.social-icons p a { display:inline-block; }
+.social-icons p.text-center { display:block; }
+
+form { text-align:left; }
