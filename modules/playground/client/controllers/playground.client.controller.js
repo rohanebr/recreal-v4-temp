@@ -10,7 +10,12 @@ angular.module('playground').controller('PlaygroundController', ['$scope', 'Auth
 		$scope.LoadInitialData = function(){
 			$http.get('/api/articles').success(function(response){
 				$scope.articles = response;
-			})
+			});
+		};
+		$scope.changePage = function(){
+			$http.post('/api/createArticle').success(function(response){
+				$state.go('employersinfo');
+			});
 		};
 	}
 ]);

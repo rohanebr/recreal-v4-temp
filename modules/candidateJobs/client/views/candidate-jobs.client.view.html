@@ -166,13 +166,15 @@
 
                   <!-- item list -->  
                   <div class="box-list">
-                    <div class="item">
+
+
+                    <div class="item" data-ng-repeat="job in jobs">
                       <div class="row">
-                        <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/1.jpg" alt=""></div></div>
+                        <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="{{job.logo}}" alt=""></div></div>
                         <div class="col-md-11">
-                          <h3 class="no-margin-top"><a ui-sref="job" class="">Backend Developer <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
-                          <h5><span class="color-black">CollegeHumor</span> - <span class="color-white-mute">New York, NY 10011 (Chelsea area)</span></h5>
-                          <p class="text-truncate ">Back-end development experience in PHP 5, and a strong understanding of Object Oriented Programming within an MVC framework</p>
+                          <h3 class="no-margin-top"><a ui-sref="job" class="">{{job.title}} <i class="fa fa-link color-white-mute font-1x"></i></a></h3>
+                          <h5><span class="color-black">{{job.company}}</span> - <span class="color-white-mute">{{job.location}}</span></h5>
+                          <p class="text-truncate ">{{job.description}}</p>
                           <div>
                             <span class="color-white-mute">16 hours ago</span> - 
                             <a href="#need-login" data-toggle="modal" class="btn btn-xs btn-theme btn-default">save job</a> - 
@@ -181,9 +183,9 @@
                           </div>
                         </div>
                       </div>
-                    </div><!-- end item list -->
+                    </div>
 
-                    <!-- item list -->
+                    <!-- end item list                    
                     <div class="item">
                       <div class="row">
                         <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/2.jpg" alt=""></div></div>
@@ -199,9 +201,9 @@
                           </div>
                         </div>
                       </div>
-                    </div><!-- end item list -->
+                    </div>
 
-                    <!-- item list -->
+                    
                     <div class="item">
                       <div class="row">
                         <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/3.jpg" alt=""></div></div>
@@ -217,9 +219,9 @@
                           </div>
                         </div>
                       </div>
-                    </div><!-- end item list -->
+                    </div>
 
-                    <!-- item list -->
+                    
                     <div class="item">
                       <div class="row">
                         <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/4.jpg" alt=""></div></div>
@@ -235,9 +237,9 @@
                           </div>
                         </div>
                       </div>
-                    </div><!-- end item list -->
+                    </div>
 
-                    <!-- item list -->
+                    
                     <div class="item">
                       <div class="row">
                         <div class="col-md-1 hidden-sm hidden-xs"><div class="img-item"><img src="./assets/theme/images/company-logo/5.jpg" alt=""></div></div>
@@ -263,7 +265,7 @@
                           </div>
                         </div>
                       </div>
-                    </div><!-- end item list -->
+                    </div> end item list -->
 
 
                   </div>
