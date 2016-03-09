@@ -22,12 +22,29 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
         return false;
       }
 
+      // code added by muddaser 
+      /**
+      *     add userType = employer/candidate based on the state
+      */
+      if( $state.current.name === 'authentication.signup-employer')
+        $scope.credentials.userType = 'employer';
+      else if($state.current.name === 'authentication.signup-candidate')
+        $scope.credentials.userType = 'candidate';
+
       $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
         // If successful we assign the response to the global user model
         $scope.authentication.user = response;
 
         // And redirect to the previous or home page
-        $state.go($state.previous.state.name || 'home', $state.previous.params);
+        // $state.go($state.previous.state.name || 'home', $state.previous.params);
+
+        // code added by muddaser 
+        if(response.userType === 'employer')
+          $state.go('employer-step-one');
+        else if(response.userType === 'candidate')
+          $state.go('candidate-step-one');
+
+
       }).error(function (response) {
         $scope.error = response.message;
       });

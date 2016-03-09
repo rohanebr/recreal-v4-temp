@@ -19,7 +19,7 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
     $scope.$on('$stateChangeSuccess', function () {
       $scope.isCollapsed = false;
 
-      // added by muddaser let the page scroll to top on state change
+      // code added by muddaser let the page scroll to top on state change
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 

@@ -1,3 +1,9 @@
 <div class="page-content-wrapper" data-ng-controller="PlaygroundController"  data-ng-init="LoadInitialData()">
-    <h1>Sample Page</h1>
+	<div class="container">
+	    <h1>Sample Page</h1>
+	    <div ng-repeat="article in articles">
+	    	<h1>{{article.title}}</h1>
+	    	<p>{{article.content}}</p>
+	    </div>
+	</div>
 </div>
