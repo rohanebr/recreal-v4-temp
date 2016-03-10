@@ -35,7 +35,7 @@ angular.module('candidateJobs').controller('CandidateJobsController', ['$scope',
 				description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage...',
 				time: '16 hours ago '
 			}
-		]
+		];
 		$scope.LoadInitialData = function(){
 			console.log('candidate jobs page');
 
