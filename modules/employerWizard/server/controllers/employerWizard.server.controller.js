@@ -6,20 +6,24 @@
 var path = require('path'),
   mongoose = require('mongoose'),
   Employer = mongoose.model('Employer'),
+  Company = mongoose.model('Company'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
 
-exports.saveEmpCompany = function(req, res){
-	console.log('this is where the magic happens');
+exports.getEmpCompany = function(req, res){
+	console.log('get emp-company called');
 	/** req has a user bound to it : req.user
 	*	
 	*/
-	res.send({message: 'this is where the magic happens'});
+	// Employer
+
+	res.json({message: 'response'});
 };
 
-exports.getEmpCompany = function(req, res){
-	console.log('this is where the magic happens');
+exports.saveEmpCompany = function(req, res){
+	console.log('post emp-company called');
 	/** req has a user bound to it : req.user
 	*	
 	*/
-	res.send({message: 'this is where the magic happens'});
+	console.log(req.body);
+	res.json({message: 'response'});
 };

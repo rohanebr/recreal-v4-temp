@@ -4,6 +4,9 @@ angular.module('employerWizard').controller('EmployerStepOneController', ['$scop
 	function($scope, Authentication, $state, $http){
 		$scope.user = Authentication.user;
 		$scope.LoadInitialData = function(){
+			$http.get('/api/countries/').success(function(response){
+				console.log(response);
+			});
 			if($scope.user.stage === 0){
 				$scope.company = {};
 				$scope.empoyer = {};
@@ -16,7 +19,16 @@ angular.module('employerWizard').controller('EmployerStepOneController', ['$scop
 			}
 		};
 		$scope.Continue = function(){
-			$http.post('/api/emp-company', {employer: $scope.employer, company: $scope.company}).success(function(response){
+			var employer = {
+				title: 'Manager IT',
+				division: 'IT',
+				department: 'Help Desk'
+			};
+			var company = {
+				company_name: 'Mobilink',
+				description: 'Telocom company'
+			};
+			$http.post('/api/emp-company', {employer: employer, company: company}).success(function(response){
 				$state.go('emp-wizard-two');
 			});
 		};
