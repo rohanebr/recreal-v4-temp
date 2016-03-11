@@ -5,11 +5,11 @@ angular.module('employerWizard').controller('EmployerStepOneController', ['$scop
 		$scope.user = Authentication.user;
 		$scope.LoadInitialData = function(){
 			$http.get('/api/countries/').success(function(response){
-				console.log(response);
+				$scope.countries = response;
 			});
 			if($scope.user.stage === 0){
 				$scope.company = {};
-				$scope.empoyer = {};
+				$scope.employer = {};
 			}
 			else{
 				$http.get('/api/emp-company').success(function(response){
