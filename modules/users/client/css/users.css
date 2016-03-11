@@ -40,3 +40,41 @@
 *   Sign in modal
 */
 .login-modal-dialog {width: 500px;}
+
+.logo-header {
+	width: 60%;
+	margin-top: 10px;
+}
+
+
+.social-icons { text-align:center; }
+.social-icons p { display:inline-block; }
+.social-icons p a { display:inline-block; }
+.social-icons p.text-center { display:block; }
+
+form { text-align:left; }
+.social-icons .btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+}
+.social-icons .btn-twitter {
+    color: #fff;
+    background-color: #55acee;
+    border-color: rgba(0,0,0,0.2);
+}
+.social-icons .btn-google-plus {
+    color: #fff;
+    background-color: #dd4b39;
+    border-color: rgba(0,0,0,0.2);
+}
+.social-icons .btn-linkedin {
+    color: #fff;
+    background-color: #007bb6;
+    border-color: rgba(0,0,0,0.2);
+}
+.social-icons .btn-github {
+    color: #fff;
+    background-color: #444;
+    border-color: rgba(0,0,0,0.2);
+}

@@ -91,6 +91,13 @@ var UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  // code added by muddaser
+  userType: {
+    type: String,
+    required: 'user must have a user type : candidate or emplyer',
+    enum: ['admin', 'candidate', 'employer'],
+    default: 'candidate'
+  },
   /* For reset password */
   resetPasswordToken: {
     type: String

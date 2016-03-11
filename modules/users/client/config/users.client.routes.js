@@ -38,6 +38,16 @@ angular.module('users').config(['$stateProvider',
         url: '/signup',
         templateUrl: 'modules/users/client/views/authentication/signup.client.view.html'
       })
+      // code added by muddaser
+      .state('authentication.signup-employer', {
+        url: '/signup-employer',
+        templateUrl: 'modules/users/client/views/authentication/signup-employer.client.view.html'
+      })
+      // code added by muddaser
+      .state('authentication.signup-candidate', {
+        url: '/signup-candidate',
+        templateUrl: 'modules/users/client/views/authentication/signup-candidate.client.view.html'
+      })
       .state('authentication.signin', {
         url: '/signin?err',
         templateUrl: 'modules/users/client/views/authentication/signin.client.view.html'

@@ -8,7 +8,13 @@ angular.module('frontend').config(['$stateProvider','$urlRouterProvider',
 		$stateProvider.
 		state('blog', {
 			url: '/blog',
-			templateUrl: 'modules/frontend/client/views/blog.client.view.html'
+			templateUrl: 'modules/frontend/client/views/blog.client.view.html'			
+		})
+		.state('single-blog', {
+			url: '/single-blog/:blogId',
+			templateUrl: function($stateParams){
+				return 'modules/frontend/client/views/blogs/'+$stateParams.blogId+'.client.view.html';
+			}
 		})
 		.state('about', {
 			url: '/about',
